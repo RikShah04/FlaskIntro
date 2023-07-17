@@ -1,0 +1,38 @@
+[
+  {
+    "name": "alice",
+    "email": "alice@outlook.com",
+    "education": "hs level",
+    "DOB": "06/29/2003",
+    "age": "19",
+    "gender": "female",
+    "marital_status": "unmarried",
+    "department": "IT",
+    "designation": "something",
+    "salary": "10"
+  },
+  {
+    "name": "rikhav",
+    "email": "rikhav@outlook.com",
+    "education": "hs level",
+    "DOB": "06/29/2004",
+    "age": "20",
+    "gender": "male",
+    "marital_status": "unmarried",
+    "department": "IT",
+    "designation": "something",
+    "salary": "10"
+  },
+  {
+    "name": "jason",
+    "email": "jason@outlook.com",
+    "education": "hs level",
+    "DOB": "06/29/2005",
+    "age": "21",
+    "gender": "male",
+    "marital_status": "married",
+    "department": "IT",
+    "designation": "something",
+    "salary": "10"
+  }
+]

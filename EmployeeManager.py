@@ -5,12 +5,12 @@ import json
 from flask import request, jsonify, make_response
 class EmployeeManager:
     @staticmethod        
-    def getEmployeeDetails(name):
+    def getEmployeeDetails(ID):
         with open('data.txt', 'r') as fileData:
             data = fileData.read()
             records = json.loads(data)
             for record in records:
-                if record["name"] == str(name):
+                if record["ID"] == str(ID):
                     return jsonify(record)
             return make_response("employee not found", 404)
         
@@ -69,7 +69,7 @@ class EmployeeManager:
         return make_response("success", 200)
     
     @staticmethod
-    def editEmployee(name):
+    def editEmployee(ID):
         record = json.loads(request.data)
         new_records = []
         exists = 0
@@ -77,7 +77,7 @@ class EmployeeManager:
             data = fileData.read()
             records = json.loads(data)
         for r in records:
-            if r["name"] == name:
+            if r["ID"] == ID:
                 record = r
                 exists = 1
             new_records.append(r)
@@ -88,14 +88,14 @@ class EmployeeManager:
         return make_response("success", 200)
     
     @staticmethod
-    def deleteEmployee(name):
+    def deleteEmployee(ID):
         exists = 0
         new_records = []
         with open('data.txt', 'r') as fileData:
             data = fileData.read()
             records = json.loads(data)
             for r in records:
-                if r["name"] == name:
+                if r["ID"] == ID:
                     exists = 1
                     continue
                 new_records.append(r)
